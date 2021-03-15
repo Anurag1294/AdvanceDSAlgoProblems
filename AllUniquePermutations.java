@@ -65,7 +65,6 @@ import java.util.HashMap;
 
 public class AllUniquePermutations {
     private static ArrayList<ArrayList<Integer>> Ans;
-
     public static void main(String[] args) {
         ArrayList<Integer> A = new ArrayList<>(Arrays.asList(1,2,3));
         Ans = new ArrayList<>();
@@ -105,13 +104,10 @@ public class AllUniquePermutations {
                     Countofvaluetillnow++;
                 }
             }
-            if (Countofvaluetillnow ==Totalcount) continue;
-            else{
+            if (Countofvaluetillnow<Totalcount){
                 Box.set(Index,k);
                 backtrack(Index+1,map,Box,A);
             }
-
         }
     }
-
 }
